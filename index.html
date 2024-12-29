@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/index.css">
+</head>
+
+<body>
+    <header>
+        <h1>ToDoList</h1>
+    </header>
+    <main>
+        <div class="addBattons-div">
+            <button id="addButton">Добавить</button>
+        </div>
+        <template id="modalTemplate">
+            <div class="modal-wrapper">
+                <div class="modal-content">
+                    <form action="" name="addTaskForm">
+                        <label for="modalTextarea">Введите задачу</label>
+                        <textarea name="modalTextarea" id="modalTextarea" rows=3 autofocus placeholder="Задача..."
+                            required></textarea>
+                        <input type="submit" value="Добавить">
+                        <input type="button" name="modal-cancel" value="Отмена">
+                    </form>
+                </div>
+            </div>
+        </template>
+        <template id="taskTemplate">
+            <li data-state="PENDING"><span></span>
+                <div class="liButtons-div">
+                    <button id="state">не выполнено</button>
+                    <button id="del">удалить</button>
+                </div>
+            </li>
+        </template>
+        <div class="tasksDiv">
+            <h2>Список задач</h2>
+            <ul>
+                <li data-state="PENDING"><span>ыволиапрроывцпиалоыотм ылдвртпаываитпмд лыдовтаплроывип лыовтипаолывтипа
+                        лоывтиаплоцытап
+                        укрошпм</span>
+                    <div class="liButtons-div">
+                        <button id="state">не выполнено</button>
+                        <button id="del">удалить</button>
+                    </div>
+
+                </li>
+                <li data-state="PENDING"><span>Задача 2 sdfsdf sdgsdgf </span>
+                    <div class="liButtons-div">
+                        <button id="state">не выполнено</button>
+                        <button id="del">удалить</button>
+                    </div>
+                </li>
+                <li data-state="FULLFILLED"><span>Задача 3</span>
+                    <div class="liButtons-div">
+                        <button id="state">выполнено</button>
+                        <button id="del">удалить</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+
+
+        <!-- Добавить задачу
+            - открыть окно добавления
+            -  модалка (темплейт через ТС открывается и закрывается)
+                - добавить
+                - отменить
+            Список задач
+            -задача списком с галочками выполнено или нет и с датой добавления
+            выполненные задачи перемещаются в конец (про конец это не точно)
+            Удалить у задач галочки, сделать цветовую дифференциацию  -->
+    </main>
+    <!-- <footer>
+        футер
+    </footer> -->
+    <script src="src/index.js"></script>
+</body>
+
+</html>
